@@ -1,0 +1,23 @@
+{
+  "name" : "PermissionModel",
+  "columns":[
+    {
+      "title": "Aktif",
+      "type": "bool",
+      "code": "active",
+      "tooltip": "active"
+    },
+    {
+      "title": "Metod",
+      "type": "string",
+      "code": "method",
+      "tooltip": "method"
+    },
+    {
+      "title": "Servis",
+      "type": "string",
+      "code": "path",
+      "tooltip": "path"
+    }
+  ]
+}

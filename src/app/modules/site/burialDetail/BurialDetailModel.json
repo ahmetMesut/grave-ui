@@ -1,0 +1,55 @@
+{
+  "name": "BurialDetailModel",
+  "fields": [
+    {
+      "label": "Mezar Sahibi",
+      "type": "list",
+      "code": "userOid",
+      "dataTextField": "name",
+      "dataValueField": "oid",
+      "items": []
+    },
+    {
+      "label": "Vefat Eden Ad",
+      "type": "string",
+      "code": "lastBurialOidName",
+      "required": false
+    },
+    {
+      "label": "Vefat Eden Soyad",
+      "type": "string",
+      "code": "lastBurialOidSurname",
+      "required": false
+    },
+    {
+      "label": "Mezarlık Adı",
+      "type": "list",
+      "code": "grave",
+      "dataTextField": "text",
+      "dataValueField": "value",
+      "items": [
+        {
+          "value": "AGM",
+          "text": "Asrı Mezarlığı"
+        },
+        {
+          "value": "BGM",
+          "text": "Bağçeşme Mezarlığı"
+        },
+        {
+          "value": "KBBM",
+          "text": "KBB Kent Mezarlığı"
+        },
+        {
+          "value": "KM",
+          "text": "Kuruçeşme Mezarlığı"
+        },
+        {
+          "value": "TM",
+          "text": "Tavşantepe Mezarlığı"
+        }
+      ]
+    }
+  ]
+}
+

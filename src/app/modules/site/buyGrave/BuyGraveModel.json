@@ -1,0 +1,133 @@
+{
+  "name": "BuyGraveModel",
+  "fields": [
+    {
+      "label": "Kişi",
+      "type": "list",
+      "code": "userOid",
+      "dataTextField": "name",
+      "dataValueField": "oid",
+      "items": []
+    },
+    {
+      "label": "Mezarlık Adı",
+      "type": "list",
+      "code": "grave",
+      "dataTextField": "text",
+      "dataValueField": "value",
+      "items": [
+        {
+          "value": "AGM",
+          "text": "Asrı Mezarlığı"
+        },
+        {
+          "value": "BGM",
+          "text": "Bağçeşme Mezarlığı"
+        },
+        {
+          "value": "KBBM",
+          "text": "KBB Kent Mezarlığı"
+        },
+        {
+          "value": "KM",
+          "text": "Kuruçeşme Mezarlığı"
+        },
+        {
+          "value": "TM",
+          "text": "Tavşantepe Mezarlığı"
+        }
+      ]
+    },
+    {
+      "label": "Ada",
+      "type": "number",
+      "code": "insular"
+    },
+    {
+      "label": "Parsel",
+      "type": "number",
+      "code": "parcel"
+    },
+    {
+      "label": "Başlangıç Mezar No",
+      "type": "number",
+      "code": "startGraveNo"
+    },
+    {
+      "label": "Ücretsiz Yanı Adedi",
+      "type": "number",
+      "code": "nextFreeGraveCount",
+      "changeCode":{
+        "totalPrice": "NEXT_TO_FREE"
+      }
+    },
+    {
+      "label": "Ücretsiz Adedi",
+      "type": "number",
+      "code": "freeGraveCount"
+
+    },
+    {
+      "label": "Ücretli Yanı Adedi",
+      "type": "number",
+      "code": "paidGraveCount",
+      "changeCode":{
+        "totalPrice": "NEXT_TO_PAID"
+      }
+    },
+    {
+      "label": "Toplam  Tutar",
+      "type": "number",
+      "code": "totalPrice",
+      "editable": false
+    },
+    {
+      "label": "Makbuz No",
+      "type": "number",
+      "code": "receiptNo"
+    },
+    {
+      "label": "Alış Tarihi",
+      "type": "date",
+      "code": "buyDate"
+    },
+    {
+      "label": "Makbuz Tarihi",
+      "type": "date",
+      "code": "receiptDate"
+    },
+    {
+      "label": "Makbuz İptal Mi",
+      "type": "list",
+      "code": "isReceiptCancel",
+      "dataTextField": "text",
+      "dataValueField": "value",
+      "items": [
+        {
+          "text": "Evet",
+          "value": "YES"
+        },
+        {
+          "text": "Hayır",
+          "value": "NO"
+        }
+      ]
+    },
+    {
+      "label": "Ruhsat No",
+      "type": "string",
+      "code": "licenceNo"
+    },
+    {
+      "label": "Ruhsat Tarihi",
+      "type": "date",
+      "code": "licenceDate"
+    },
+    {
+      "label": "Ruhsat Harç Tutar",
+      "type": "number",
+      "code": "licenceMortar"
+    }
+  ]
+}
+

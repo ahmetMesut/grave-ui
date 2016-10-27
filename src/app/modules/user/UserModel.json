@@ -1,0 +1,146 @@
+{
+  "name": "UserModel",
+  "fields": [
+    {
+      "label": "E-Posta",
+      "type": "string",
+      "code": "email",
+      "tooltip": "Email",
+      "validations": {
+        "max": [
+          50,
+          "Bu alan 50 karakterden fazla olamaz."
+        ],
+        "min": [
+          5,
+          "Bu alan 5 karakterden az olamaz."
+        ],
+        "regex": [
+          "\\S+@\\S+\\.\\S+",
+          "Bu alan mail formatında olmalıdır."
+        ]
+      }
+    },
+    {
+      "label": "Ad   ",
+      "type": "string",
+      "code": "name",
+      "tooltip": "Adı",
+      "validations": {
+        "regex": [
+          "^[a-zA-Z\\s\\ç\\Ç\\ö\\Ö\\ş\\Ş\\ı\\İ\\ğ\\Ğ\\ü\\Ü]+$",
+          "Sadece harflerden oluşmalıdır."
+        ],
+        "required": [
+          true,
+          "Bu alan zorunludur."
+        ],
+        "max": [
+          50,
+          "Bu alan 50 karakterden fazla olamaz."
+        ],
+        "min": [
+          3,
+          "Bu alan 3 karakterden az olamaz."
+        ]
+      }
+    },
+    {
+      "label": "Soyad",
+      "type": "string",
+      "code": "surname",
+      "tooltip": "Soyadı",
+      "validations": {
+        "regex": [
+          "^[a-zA-Z\\s\\ç\\Ç\\ö\\Ö\\ş\\Ş\\ı\\İ\\ğ\\Ğ\\ü\\Ü]+$",
+          "Sadece harflerden oluşmalıdır."
+        ],
+        "required": [
+          true,
+          "Bu alan zorunludur."
+        ],
+        "max": [
+          50,
+          "Bu alan 50 karakterden fazla olamaz."
+        ],
+        "min": [
+          2,
+          "Bu alan 2 karakterden az olamaz."
+        ]
+      }
+    },
+    {
+      "label": "Şifre",
+      "type": "password",
+      "code": "password",
+      "tooltip": "Şifre",
+      "validations": {
+        "required": [
+          true,
+          "Bu alan zorunludur."
+        ],
+        "min": [
+          6,
+          "Bu alan 6 karakterden az olamaz."
+        ]
+      }
+    },
+    {
+      "label": "Aktif",
+      "type": "check",
+      "code": "active",
+      "tooltip": "Aktif"
+    },
+    {
+      "label": "Fail Count",
+      "type": "number",
+      "code": "failCount",
+      "tooltip": "Fail Count",
+      "visible": false,
+      "validations": {
+        "required": [
+          true,
+          "Bu alan zorunludur."
+        ]
+      }
+    },
+    {
+      "label": "Son Login Zamanı",
+      "type": "date",
+      "code": "lastLoginTime",
+      "tooltip": "Son Login Zamanı",
+      "visible": false
+    },
+    {
+      "label": "Son Çıkış Zamanı",
+      "type": "date",
+      "code": "lastLogoutTime",
+      "tooltip": "Son Çıkış Zamanı",
+      "visible": false
+    },
+    {
+      "label": "Rol",
+      "type": "list",
+      "code": "roleOid",
+      "tooltip": "Rol",
+      "textField": "name",
+      "valueField": "oid",
+      "optionLabel": "<Lütfen Seçiniz>",
+      "items": [],
+      "validations": {
+        "required": [
+          true,
+          "Bu alan zorunludur."
+        ],
+        "max": [
+          32,
+          "Bu alan 32 karakterden fazla olamaz."
+        ],
+        "min": [
+          32,
+          "Bu alan 32 karakterden az olamaz."
+        ]
+      }
+    }
+  ]
+}

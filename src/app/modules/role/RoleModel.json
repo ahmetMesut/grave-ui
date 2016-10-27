@@ -1,0 +1,19 @@
+{
+  "name": "RoleModel",
+  "fields": [
+    {
+      "label": "Name",
+      "code": "name",
+      "type": "string",
+      "required": true,
+      "minLength": 3
+    },
+    {
+      "label": "Code",
+      "code": "code",
+      "type": "string",
+      "required": true,
+      "minLength": 3
+    }
+  ]
+}

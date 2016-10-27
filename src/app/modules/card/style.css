@@ -1,0 +1,49 @@
+.card,
+.card-unfilled {
+    -webkit-box-shadow: 0 5px 10px rgba(100, 100, 100, .1);
+    box-shadow: 0 5px 10px rgba(100, 100, 100, .1);
+
+    background-clip: padding-box;
+    background-color: #fff;
+    border: 1px solid #eaeaea;
+
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    border-radius: 2px !important;
+}
+
+.card-borderless,
+.card-borderless-unfilled {
+    margin-bottom: 20px;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    background: white;
+    border-radius: 0px !important;
+    border: 0px;
+}
+
+.card-unfilled .panel-body,
+.card-borderless-unfilled .panel-body {
+    padding: 0px;
+}
+
+.page-header {
+    padding: 8px 6px 0px 15px;
+    margin: -10px -15px -12px -15px;
+    border-radius: 4px;
+    color: #777777;
+    border-bottom: 1px solid #B5D3E7;
+    background: #F6F6F6;
+}
+
+.card-unfilled .page-header,
+.card-borderless-unfilled .page-header {
+    padding: 8px 6px 0px 15px;
+    margin: -10px -15px -12px -15px;
+    border-radius: 4px;
+    color: #777777;
+    border-bottom: 1px solid #B5D3E7;
+    background: #F6F6F6;
+}

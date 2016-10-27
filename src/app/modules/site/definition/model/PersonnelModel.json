@@ -1,0 +1,23 @@
+{
+  "name": "PersonnelModel",
+  "fields": [
+    {
+      "label": "TC Kimlik No",
+      "code": "idNumber",
+      "type": "number",
+      "required":false
+    },
+    {
+      "label": "Ad Soyad",
+      "code": "name",
+      "type": "string",
+      "required":false
+    },
+    {
+      "label": "Doğum Tarihi",
+      "code": "birthDate",
+      "type": "date",
+      "required":false
+    }
+  ]
+}

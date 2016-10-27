@@ -1,0 +1,34 @@
+{
+  "name": "GravePriceModel",
+  "fields": [
+    {
+      "label": "Ücret Tipi",
+      "type": "list",
+      "code": "priceType",
+      "placeHolder":"<Seçiniz>",
+      "dataTextField": "text",
+      "dataValueField": "value",
+      "items": [
+        {
+          "value": "NEXT_TO_PAID",
+          "text": "Ücretli Yanı"
+        },
+        {
+          "value": "NEXT_TO_FREE",
+          "text": "Ücretsiz Yanı"
+        },
+        {
+          "value": "FREE",
+          "text": "Ücretsiz"
+        }
+      ]
+    },
+    {
+      "label": "Mezar Birim Fİyat",
+      "code": "unitPrice",
+      "type": "number",
+      "required": true,
+      "minLength": 1
+    }
+  ]
+}

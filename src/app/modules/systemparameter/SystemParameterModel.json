@@ -1,0 +1,19 @@
+{
+  "name": "SystemParameterModel",
+  "fields": [
+    {
+      "label": "Key",
+      "code": "key",
+      "type": "string",
+      "required": true,
+      "minLength": 3
+    },
+    {
+      "label": "Value",
+      "code": "value",
+      "type": "string",
+      "required": true,
+      "minLength": 3
+    }
+  ]
+}

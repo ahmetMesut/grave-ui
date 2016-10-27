@@ -1,0 +1,135 @@
+{
+  "name": "BurialModel",
+  "fields": [
+    {
+      "label": "Kayıt No",
+      "type": "number",
+      "code": "registerNo",
+      "required": "false"
+    },
+    {
+      "label": "Mezar Sahibi",
+      "type": "list",
+      "code": "userOid",
+      "required": false,
+      "dataTextField": "name",
+      "dataValueField": "oid",
+      "items": []
+    },
+    {
+      "label": "Vefat Eden Ad",
+      "type": "string",
+      "code": "lastBurialOidName",
+      "required": false
+    },
+    {
+      "label": "Vefat Eden Soyad",
+      "type": "string",
+      "code": "lastBurialOidSurname",
+      "required": false
+    },
+    {
+      "label": "Mezarlık Adı",
+      "type": "list",
+      "code": "grave",
+      "dataTextField": "text",
+      "dataValueField": "value",
+      "items": [
+        {
+          "value": "AGM",
+          "text": "Asrı Mezarlığı"
+        },
+        {
+          "value": "BGM",
+          "text": "Bağçeşme Mezarlığı"
+        },
+        {
+          "value": "KBBM",
+          "text": "KBB Kent Mezarlığı"
+        },
+        {
+          "value": "KM",
+          "text": "Kuruçeşme Mezarlığı"
+        },
+        {
+          "value": "TM",
+          "text": "Tavşantepe Mezarlığı"
+        }
+      ]
+    },
+    {
+      "label": "Mezar Tipi",
+      "type": "list",
+      "code": "graveType",
+      "dataTextField": "text",
+      "dataValueField": "value",
+      "required": false,
+      "items":[
+        {
+          "value": "NEXT_TO_PAID",
+          "text": "Ücretli Yanı"
+        },
+        {
+          "value": "NEXT_TO_FREE",
+          "text": "Ücretsiz Yanı"
+        },
+        {
+          "value": "FREE",
+          "text": "Ücretsiz"
+        }
+      ]
+    },
+    {
+      "label": "Ada",
+      "type": "string",
+      "code": "insular",
+      "required": false
+    },
+    {
+      "label": "Parsel",
+      "type": "number",
+      "code": "parcel",
+      "required": false
+    },
+    {
+      "label": "Mezar No",
+      "type": "number",
+      "code": "startGraveNo",
+      "required": false
+    },
+    {
+      "label": "Alındığı Tarih",
+      "type": "date",
+      "code": "buyDate",
+      "visible":false,
+      "required": false
+    },
+    {
+      "label": "Mezar Durumu",
+      "type": "list",
+      "code": "graveState",
+      "dataTextField": "text",
+      "dataValueField": "value",
+      "required": false,
+      "items":[
+        {
+          "value": "NULL",
+          "text": "Boş"
+        },
+        {
+          "value": "FULL",
+          "text": "Dolu"
+        },
+        {
+          "value": "OVER_BURIAL",
+          "text": "Üzerine Defnedildi"
+        },
+        {
+          "value": "CANCELLED",
+          "text": "İptal Edildi"
+        }
+      ]
+    }
+  ]
+}
+

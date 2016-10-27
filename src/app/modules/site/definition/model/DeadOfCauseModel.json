@@ -1,0 +1,12 @@
+{
+  "name": "DeadOfCauseModel",
+  "fields": [
+    {
+      "label": "Ölüm Nedeni",
+      "code": "name",
+      "type": "string",
+      "required": true,
+      "minLength": 1
+    }
+  ]
+}

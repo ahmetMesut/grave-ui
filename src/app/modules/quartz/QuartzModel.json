@@ -1,0 +1,19 @@
+{
+  "name": "QuartzModel",
+  "fields": [
+    {
+      "label": "Name",
+      "code": "name",
+      "type": "string",
+      "required": true,
+      "minLength": 3
+    },
+    {
+      "label": "Description",
+      "code": "description",
+      "type": "string",
+      "required": true,
+      "minLength": 3
+    }
+  ]
+}

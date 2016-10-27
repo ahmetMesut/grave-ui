@@ -1,0 +1,318 @@
+{
+  "name": "BurialRecordModelForGrid",
+  "fields": [
+    {
+      "label": "TC Kimlik No",
+      "type": "number",
+      "visible": true,
+      "code": "idNumber",
+      "required": false
+    },
+    {
+      "label": "Baba Adı",
+      "type": "string",
+      "code": "fatherName",
+      "visible": false,
+      "required": false
+    },
+    {
+      "label": "Ad",
+      "type": "string",
+      "code": "name",
+      "visible": true,
+      "required": false
+    },
+    {
+      "label": "Soyad",
+      "type": "string",
+      "code": "surname",
+      "visible": true,
+      "required": false
+    },
+    {
+      "label": "Cinsiyet",
+      "code": "gender",
+      "type": "list",
+      "required": false,
+      "visible": true,
+      "placeHolder": "<Seçiniz>",
+      "dataTextField": "text",
+      "dataValueField": "value",
+      "items": [
+        {
+          "value": "MALE",
+          "text": "Bay"
+        },
+        {
+          "value": "FEMALE",
+          "text": "Bayan"
+        }
+      ]
+    },
+    {
+      "label": "Anne Adı",
+      "type": "string",
+      "code": "motherName",
+      "visible": false,
+      "required": false
+    },
+    {
+      "label": "Doğum Tarihi",
+      "type": "date",
+      "code": "birthDate",
+      "visible": false,
+      "required": false
+    },
+    {
+      "label": "Doğum ili",
+      "type": "list",
+      "code": "birthPlace",
+      "visible": false,
+      "required": false,
+      "placeHolder": "<Seçiniz>",
+      "dataTextField": "name",
+      "dataValueField": "oid",
+      "items": []
+    },
+    {
+      "label": "Ölüm Tarihi",
+      "type": "date",
+      "visible": false,
+      "code": "dateOfDeath",
+      "required": false
+    },
+    {
+      "label": "Ölüm Nedeni",
+      "type": "list",
+      "code": "causeOfDeath",
+      "required": false,
+      "visible": true,
+      "placeHolder": "<Seçiniz>",
+      "dataTextField": "name",
+      "dataValueField": "oid",
+      "items": []
+    },
+    {
+      "label": "Ölüm Açıklaması",
+      "type": "string",
+      "code": "descriptionOfDeath",
+      "visible": false,
+      "required": false
+    },
+    {
+      "label": "Ölüm Yeri",
+      "type": "string",
+      "code": "placeOfDeath",
+      "visible": false,
+      "required": false
+    },
+    {
+      "label": "Adresi",
+      "type": "string",
+      "code": "address",
+      "visible": false,
+      "required": false
+    },
+    {
+      "label": "Vefat İli",
+      "type": "list",
+      "placeHolder": "<Seçiniz>",
+      "code": "provinceOfDeath",
+      "visible": true,
+      "dataTextField": "name",
+      "dataValueField": "oid",
+      "items": [],
+      "cascade": {
+        "districtOfDeath": "provinceOid"
+      },
+      "required": false
+    },
+    {
+      "label": "Vefat İlçesi",
+      "type": "list",
+      "placeHolder": "Önce İl Seçiniz",
+      "visible": false,
+      "code": "districtOfDeath",
+      "dataTextField": "name",
+      "dataValueField": "oid",
+      "items": [],
+      "required": false
+    },
+    {
+      "label": "Doktor Adı",
+      "type": "string",
+      "code": "doctorName",
+      "visible": false,
+      "required": false
+    },
+    {
+      "label": "Doktor Soyadı",
+      "type": "string",
+      "code": "doctorSurname",
+      "visible": false,
+      "required": false
+    },
+    {
+      "label": "İlgili Kisi Ad Soyad",
+      "type": "string",
+      "code": "relatedPersonFullName",
+      "visible": false,
+      "required": false
+    },
+    {
+      "label": "İlgili Kisi Yakinligi",
+      "type": "string",
+      "visible": false,
+      "code": "relatedDegree",
+      "required": false
+    },
+    {
+      "label": "Cami",
+      "type": "list",
+      "code": "mosque",
+      "visible": true,
+      "dataTextField": "name",
+      "dataValueField": "oid",
+      "items": [],
+      "placeHolder": "<Seçiniz>",
+      "required": false
+    },
+    {
+      "label": "Yakınlık Açıklaması",
+      "type": "string",
+      "code": "relatedDescription",
+      "visible": false,
+      "required": false
+    },
+    {
+      "label": "Cami Açıklaması",
+      "type": "string",
+      "code": "mosqueDescription",
+      "visible": false,
+      "required": false
+    },
+    {
+      "label": "Defin Tarihi",
+      "type": "date",
+      "code": "burialDate",
+      "visible": true,
+      "required": false
+    },
+    {
+      "label": "Defin Zamanı",
+      "type": "list",
+      "code": "burialTime",
+      "dataTextField": "text",
+      "visible": true,
+      "dataValueField": "value",
+      "items": [
+        {
+          "value": "NONE",
+          "text": "Belirtilmemiş"
+        },
+        {
+          "value": "MORNING",
+          "text": "Sabah"
+        },
+        {
+          "value": "NOON",
+          "text": "Öğle"
+        },
+        {
+          "value": "AFTERNOON",
+          "text": "İkindi"
+        }
+      ],
+      "placeHolder": "<Seçiniz>",
+      "required": false
+    },
+    {
+      "label": "Defin Tarihi Açıklaması",
+      "type": "string",
+      "code": "burialTimeDescription",
+      "visible": false,
+      "required": false
+    },
+    {
+      "label": "Defin Mezarlığı",
+      "type": "list",
+      "code": "grave",
+      "visible": true,
+      "dataTextField": "text",
+      "dataValueField": "value",
+      "items": [
+        {
+          "value": "AGM",
+          "text": "Asrı Mezarlığı"
+        },
+        {
+          "value": "BGM",
+          "text": "Bağçeşme Mezarlığı"
+        },
+        {
+          "value": "KBBM",
+          "text": "KBB Kent Mezarlığı"
+        },
+        {
+          "value": "KM",
+          "text": "Kuruçeşme Mezarlığı"
+        },
+        {
+          "value": "TM",
+          "text": "Tavşantepe Mezarlığı"
+        }
+      ],
+      "placeHolder": "<Seçiniz>",
+      "required": false
+    },
+    {
+      "label": "Defin Durumu",
+      "type": "list",
+      "code": "operationType",
+      "required": false,
+      "placeHolder": "<Seçiniz>",
+      "dataTextField": "text",
+      "visible": true,
+      "dataValueField": "value",
+      "items": [
+        {
+          "value": "NON_MUNICIPAL",
+          "text": "Belediye Dışı"
+        },
+        {
+          "value": "IN_MUNICIPAL",
+          "text": "Bilgi İçin"
+        },
+        {
+          "value": "BURIED",
+          "text": "Defnedildi"
+        },
+        {
+          "value": "WILL_BURIAL",
+          "text": "Defnedilecek"
+        }
+      ]
+    },
+    {
+      "label": "İlgili Adresi",
+      "type": "string",
+      "code": "relatedAddress",
+      "visible": false,
+      "required": false
+    },
+    {
+      "label": "İlgili Telefon",
+      "type": "number",
+      "visible": false,
+      "code": "relatedPhone",
+      "required": false
+    },
+    {
+      "label": "İlgili GSM",
+      "type": "number",
+      "visible": false,
+      "code": "relatedCellphone",
+      "required": false
+    }
+  ]
+}
