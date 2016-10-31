@@ -5,8 +5,8 @@ import Switch from "app/Switch";// eslint-disable-line import/no-unresolved
 const app = document.getElementById("app");
 
 // ****FOR DEV****
-window.applicationRootPath = "/";
-window.backendRootPath = "http://192.168.1.74:8080/grave/";
+window.applicationRootPath = "/grave/ui/";
+window.backendRootPath = "/grave/";
 
 
 render((<Switch />), app);
