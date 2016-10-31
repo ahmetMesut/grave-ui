@@ -104,6 +104,8 @@
     "react-treebeard": "1.1.2",
     "robe-ajax": "1.0.0",
     "robe-react-commons": "1.0.50",
-    "robe-react-ui": "1.0.28"
+    "robe-react-ui": "1.0.28",
+    "react-loading":"0.0.9",
+    "crypto-js":"3.1.8"
   }
 }
