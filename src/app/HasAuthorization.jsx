@@ -32,7 +32,7 @@ export default class HasAuthorization extends ShallowComponent {
             path: "*",
             getComponent(location: string, cb: Function) {
                 require.ensure([], (require: Object) => {
-                    cb(null, HasAuthorization.importComponent(require("./common/NotFound")));
+                    cb(null, HasAuthorization.importComponent(require("./modules/workspace/WelcomePage")));
                 });
             }
         };

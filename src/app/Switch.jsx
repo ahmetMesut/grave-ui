@@ -11,7 +11,7 @@ export default class Switch extends ShallowComponent {
     constructor(props: Object) {
         super(props);
         Application.setBaseUrlPath("http://demo.mebitech.com/grave");
-        Application.getProps().set("ROOT.PATH", "/grave/ui/");
+        Application.getProps().set("ROOT.PATH", "/");
         let username = cookie.load("username");
         let me = this;
         ajax.ajaxSetup({
