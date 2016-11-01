@@ -6,7 +6,7 @@ const app = document.getElementById("app");
 
 // ****FOR DEV****
 window.applicationRootPath = "/";
-window.backendRootPath = "/grave/";
+window.backendRootPath = "/grave/ui";
 
 
 render((<Switch />), app);
