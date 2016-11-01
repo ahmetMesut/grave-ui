@@ -5,7 +5,7 @@ import Switch from "app/Switch";// eslint-disable-line import/no-unresolved
 const app = document.getElementById("app");
 
 // ****FOR DEV****
-window.applicationRootPath = "/";
+window.applicationRootPath = "/grave/ui";
 window.backendRootPath = "/grave/";
 
 
