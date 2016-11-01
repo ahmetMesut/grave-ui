@@ -10,7 +10,7 @@ import Loading from "app/modules/loading/Loading";
 export default class Switch extends ShallowComponent {
     constructor(props: Object) {
         super(props);
-        Application.setBaseUrlPath("http://demo.mebitech.com/grave/ui");
+        Application.setBaseUrlPath("http://demo.mebitech.com/grave");
         Application.getProps().set("ROOT.PATH", "/");
         let username = cookie.load("username");
         let me = this;
