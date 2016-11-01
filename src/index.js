@@ -5,7 +5,7 @@ import Switch from "app/Switch";
 const app = document.getElementById("app");
 
 // ****FOR DEV****
-window.applicationRootPath = "/grave/ui/";
+window.applicationRootPath = "/";
 window.backendRootPath = "/grave/";
 
 
