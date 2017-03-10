@@ -1,7 +1,4 @@
-# Robe-React-Admin
-#### Robe Admin UI Website
-
-RRA = Robe-React-Admin
+# Robe-React
 
 ##### Motivation
 
