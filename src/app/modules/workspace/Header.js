@@ -1,4 +1,5 @@
 import React from "react";
+import {Application} from "robe-react-commons";
 import ShallowComponent from "../../../../node_modules/robe-react-commons/lib/components/ShallowComponent";
 import Navbar from "../../../../node_modules/react-bootstrap/lib/Navbar";
 import Button from "../../../../node_modules/react-bootstrap/lib/Button";
@@ -26,9 +27,9 @@ export default class Header extends ShallowComponent {
                     <Col componentClass="span" className="icon-bar" />
                     <Col componentClass="span" className="icon-bar" />
                 </Button>
-                <Link className="content" to={window.applicationRootPath}>
+                <Link className="content" to={Application.getProps().get("ROOT.PATH")}>
                     <Navbar.Brand>
-                        <Col className="hidden-xs" style={{paddingTop:15}}>Kocaeli Büyükşehir Belediyesi</Col>
+                        <Col className="hidden-xs" style={{paddingTop:15}}>Mezarlık Sistemi</Col>
                     </Navbar.Brand>
                 </Link>
                 <ButtonToolbar className="pull-right buttongroups-header" style={{ marginTop: "7px", marginRight: "-20px" }}>

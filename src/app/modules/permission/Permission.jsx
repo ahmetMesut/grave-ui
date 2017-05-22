@@ -1,4 +1,5 @@
 import React from "react";
+import {Application} from "robe-react-commons";
 import Card from "app/modules/card/Card";
 import jajax from "robe-ajax";
 import Col from "../../../../node_modules/react-bootstrap/lib/Col";
@@ -28,7 +29,8 @@ class Permission extends ShallowComponent {
 
     render(): Object {
         return (
-            <Card header="İzin Yönetimi" description="İlk önce değişiklik yapacağınız rolü sonra işlem yapmak istediğiniz izin grubunu seçiniz. İzin grubu ile ilişkili menüler renk farklılığı ile belirtilecektir.">
+            <Card header="İzin Yönetimi"
+                  description="İlk önce değişiklik yapacağınız rolü sonra işlem yapmak istediğiniz izin grubunu seçiniz. İzin grubu ile ilişkili menüler renk farklılığı ile belirtilecektir.">
                 <Row>
                     <br />
                 </Row>
@@ -96,9 +98,11 @@ class Permission extends ShallowComponent {
             this.__readRolePermissions(role);
         }
     }
+
     __readRolePermissions() {
 
     }
+
     __readMenu() {
 
     }
@@ -106,6 +110,7 @@ class Permission extends ShallowComponent {
     __readGroups() {
 
     }
+
     __onGroupsSelection(value: string) {
         if (value && value.length > 0) {
             this.__readGroupMenuAndService(value);
@@ -115,6 +120,7 @@ class Permission extends ShallowComponent {
             });
         }
     }
+
     __readGroupMenuAndService() {
 
     }
@@ -142,7 +148,7 @@ class Permission extends ShallowComponent {
         this.__setComponentCheckStates(undefined, checkedMenu, servicesChecked);
     }
 
-    __onMenuCheck = (value, status)=> {
+    __onMenuCheck = (value, status) => {
         let menuChecks = this.refs.menuCheckTree.state.checkedItems;
 
         var index = menuChecks.indexOf(value);    // <-- Not supported in <IE9
@@ -161,7 +167,7 @@ class Permission extends ShallowComponent {
     };
 
 
-    __onServicesCheck = (checkedItems, value, checked)=> {
+    __onServicesCheck = (checkedItems, value, checked) => {
         if (this.state.role) {
             if (checked) {
                 checkedItems.push(value);
@@ -173,7 +179,7 @@ class Permission extends ShallowComponent {
     };
 
 
-    __setComponentCheckStates = (groupChecks, menuChecks, serviceChecks)=> {
+    __setComponentCheckStates = (groupChecks, menuChecks, serviceChecks) => {
         if (groupChecks) {
             this.refs.groupsCheckList.setState({
                 checkedItems: groupChecks
@@ -194,7 +200,7 @@ class Permission extends ShallowComponent {
         }
     };
 
-    __onClearClick = ()=> {
+    __onClearClick = () => {
         this.__setComponentCheckStates([], [], []);
 
         if (this.state.role) {
@@ -204,7 +210,7 @@ class Permission extends ShallowComponent {
 
     };
 
-    __onSaveClick = ()=> {
+    __onSaveClick = () => {
 
         let data = {};
 
@@ -219,7 +225,7 @@ class Permission extends ShallowComponent {
             "type": "POST",
             "dataType": "json",
             "contentType": "application/json; charset=utf-8",
-            "url": window.backendRootPath + "permissions/" + this.state.role,
+            "url": Application.getBaseUrlPath() + "permissions/" + this.state.role,
             "data": JSON.stringify(data),
             "xhrFields": {
                 "withCredentials": true
@@ -239,13 +245,13 @@ class Permission extends ShallowComponent {
             type: "GET"
         });
 
-        _readRequest.call(undefined, undefined, (response)=> {
+        _readRequest.call(undefined, undefined, (response) => {
             this.setState({
                 roleStoreData: response
             })
         });
     };
-    componentWillUnmount = ()=> {
+    componentWillUnmount = () => {
     };
 
 }

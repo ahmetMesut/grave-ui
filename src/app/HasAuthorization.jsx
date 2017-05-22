@@ -1,4 +1,5 @@
 import React from "react";
+import {Application} from "robe-react-commons";
 import ShallowComponent from "robe-react-commons/lib/components/ShallowComponent";
 import Router from "react-router/lib/Router";
 import BrowserHistory from "react-router/lib/browserHistory";
@@ -42,7 +43,7 @@ export default class HasAuthorization extends ShallowComponent {
 
         return ({
             menu: routes,
-            path: window.applicationRootPath,
+            path: Application.getProps().get("ROOT.PATH"),
             component: Workspace,
             indexRoute: INDEX_ROUTE,
             childRoutes: this.ROUTES
